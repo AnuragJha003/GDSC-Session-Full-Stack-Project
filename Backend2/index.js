@@ -16,7 +16,7 @@ const storage = multer.memoryStorage();
 const upload = multer({ storage: storage });
 
 // Access your API key as an environment variable
-const genAI = new GoogleGenerativeAI("AIzaSyC7syWSzKcwTigSKS-1wBescAE8Jn3QTeM");
+const genAI = new GoogleGenerativeAI(process.env.API_KEY);
 
 // Converts local file information to a GoogleGenerativeAI.Part object.
 function fileToGenerativePart(buffer, mimeType) {
