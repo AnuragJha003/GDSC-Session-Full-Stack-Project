@@ -15,11 +15,12 @@ const Main = () => {
     try {
       setLoading(true);
 
-      const res = await axios.post('https://localhost:4000/', {
+      const res = await axios.post('http://localhost:4000', {
         prompt: inputData,
       });
 
       const data = res.data;
+      console.log(data);
       setResponse(data.response);
       setShowResponse(true); 
     } catch (error) {

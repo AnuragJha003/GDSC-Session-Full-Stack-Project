@@ -28,7 +28,7 @@ const ImageMain = () => {
       formData.append('image',selectedImage);
       formData.append('question',question);
 
-      const response=await axios.post('https://localhost:3000/', formData,
+      const response=await axios.post('http://localhost:3000/', formData,
     {
       headers:{
         'Content-Type':'multipart/form-data',
