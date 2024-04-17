@@ -15,7 +15,7 @@ const Main = () => {
     try {
       setLoading(true);
 
-      const res = await axios.post('https://backend-one-rouge.vercel.app/', {
+      const res = await axios.post('https://localhost:4000/', {
         prompt: inputData,
       });
 

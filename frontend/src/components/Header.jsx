@@ -1,6 +1,6 @@
 import React ,{useState} from 'react'
 import { Link } from 'react-router-dom'
-
+import '../assets/Navbar.css'
 
 const Navbar = () => {
   const [ismobilemenopen,setMobilemenopen]=useState(false);
@@ -21,7 +21,7 @@ const Navbar = () => {
         <Link to="/" className='navbar-logo' style={{marginLeft:'50px'}}>
           <p><span style={{fontSize:'xxx-large'}}>G</span>dscJU.<span className='blink'>GG</span></p>
         </Link>
-        <div className="mobile-menu-toggle" onClick={toggleMobileMenu}>
+        <div className="mobile-menu-toggle" onClick={toggleMobilemen}>
           <span className="bar"></span>
           <span className="bar"></span>
           <span className="bar"></span>
@@ -33,7 +33,7 @@ const Navbar = () => {
             </Link>
           </li>
           <li className="nav-item">
-            <Link to="/image" className="nav-link" onClick={toggleMobileMenu}>
+            <Link to="/image" className="nav-link" onClick={toggleMobilemen}>
               Image Gemini Model
             </Link>
           </li>
