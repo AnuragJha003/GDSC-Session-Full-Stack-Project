@@ -1,6 +1,5 @@
 
 # GDSC JU Full stack 
-(It is working locally now with some issues which will be resolved tomorrow since today is UCL night)
 
 A learning useful  application that combines both frontend and backend components .
 Follow the steps below to set up and run Gemini AI on your local machine.
