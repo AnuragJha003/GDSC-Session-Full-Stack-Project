@@ -15,7 +15,7 @@ const Main = () => {
     try {
       setLoading(true);
 
-      const res = await axios.post('http://localhost:4000', {
+      const res = await axios.post('http://gdsc-session-full-stack-project-backendf.onrender.com', {
         prompt: inputData,
       });
       // https://gdsc-session-full-stack-project-backendf.onrender.com/

@@ -35,7 +35,7 @@ const ImageMain = () => {
       },
     });*/
     //https://gdsc-session-full-stack-project-backend2.onrender.com/
-    const response=await axios.post('http://localhost:3000/upload', formData,
+    const response=await axios.post('http://gdsc-session-full-stack-project-backend2.onrender.com/upload', formData,
     {
       headers:{
         'Content-Type':'multipart/form-data',
