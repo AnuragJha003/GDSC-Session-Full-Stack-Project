@@ -15,9 +15,13 @@ const Main = () => {
     try {
       setLoading(true);
 
-      const res = await axios.post('http://localhost:4000', {
+      const res = await axios.post('https://gdsc-session-full-stack-project-backendf.onrender.com', {
         prompt: inputData,
       });
+      // https://gdsc-session-full-stack-project-backendf.onrender.com/
+      /*const res= await axios.post('https://gdsc-session-full-stack-project-backendf.onrender.com',{
+        prompt:inputData
+      })*/
 
       const data = res.data;
       console.log(data);
@@ -67,11 +71,6 @@ const Main = () => {
         <div className={`response-container ${showResponse ? 'incoming' : ''}`} style={{ textAlign: 'left',display:'flex',justifyContent:'center',flexDirection:'column'}}>
         <ReactMarkdown remarkPlugins={[gfm]}>{response}</ReactMarkdown>
         </div>
-
-
-
-        
-   
     </>
   );
 };
