@@ -12,6 +12,13 @@ app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
+app.use(function (request, response, next) {
+    response.header("Access-Control-Allow-Origin", "http://localhost:5173");
+    response.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+    next();
+});
+
+
 const genAI = new GoogleGenerativeAI(process.env.API_KEY);
 
 async function run(prompt) {

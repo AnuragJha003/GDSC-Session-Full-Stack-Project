@@ -9,6 +9,11 @@ const app = express();
 const port = 3000;
 
 app.use(cors());
+app.use(function (request, response, next) {
+  response.header("Access-Control-Allow-Origin", "http://localhost:5173");
+  response.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  next();
+});
 
 dotenv.config();
 
